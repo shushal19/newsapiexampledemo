@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:newsapiexample/http_service.dart';
 import 'package:newsapiexample/models/newaclass.dart';
+import 'package:newsapiexample/news_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -56,10 +57,10 @@ http=HttpService();
       body: isLoading?
        const Center(child: CircularProgressIndicator())
 :
-ListView.builder(itemCount: 25,itemBuilder: ((context,index){
+ListView.builder(itemBuilder: ((context,index){
 List<Articles>? listOfNews=news!.articles;
-Articles singleNews=listOfNews![index];
-return Text("${singleNews.title})",);
+
+return NewsCard(article: listOfNews![index]);
 
 
 }))
