@@ -52,7 +52,18 @@ http=HttpService();
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child:  Text("NewsApi Demo")),
+        title: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Flutter",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+            Text("News",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),),
+          ],
+
+        ),
+        backgroundColor: Colors.white,
+        
+       
+        
       ),
 
       body: isLoading?

@@ -8,7 +8,20 @@ class DetailsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Flutter",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+            Text("News",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),),
+          ],
+
+        ),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+       
+        
+      ),
       body: Card(
         margin: const EdgeInsets.all(8.0),
         elevation: 0.0, // Add elevation for a shadow effect
