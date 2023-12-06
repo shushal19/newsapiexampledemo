@@ -56,7 +56,7 @@ http=HttpService();
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Flutter",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-            Text("News",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),),
+            Text("News",style: TextStyle(color: Color.fromARGB(255, 71, 168, 233),fontWeight: FontWeight.bold),),
           ],
 
         ),
