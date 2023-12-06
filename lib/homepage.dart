@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:newsapiexample/details_pages.dart';
 import 'package:newsapiexample/http_service.dart';
 import 'package:newsapiexample/models/newaclass.dart';
 import 'package:newsapiexample/news_card.dart';
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
 
  Future getNews() async{
 isLoading=true;
-Response response =await http.getRequest("v2/everything?q=tesla&from=2023-11-04&sortBy=publishedAt&apiKey=c91805b7f84e423bbb5f06a0f1320ff1");
+Response response =await http.getRequest("v2/everything?q=tesla&from=2023-12-04&sortBy=publishedAt&apiKey=c91805b7f84e423bbb5f06a0f1320ff1");
 isLoading=false;
 
 try {
@@ -60,7 +61,12 @@ http=HttpService();
 ListView.builder(itemBuilder: ((context,index){
 List<Articles>? listOfNews=news!.articles;
 
-return NewsCard(article: listOfNews![index]);
+return GestureDetector(
+  onTap: (){
+   Navigator.push(context,MaterialPageRoute(builder: (context)=>
+    DetailsCard(article: listOfNews[index])));
+  },
+  child: NewsCard(article: listOfNews![index]));
 
 
 }))
