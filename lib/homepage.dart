@@ -87,13 +87,13 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       height: 100,
                       child: ListView.builder(
-                        itemCount: childrenContainers.length,
-scrollDirection: Axis.horizontal,
-itemBuilder: (context, index) {
-  return GestureDetector(
-    child: _buildContainer(index),
-  );
-},
+                        itemCount: categoryList.length,
+                         scrollDirection: Axis.horizontal,
+                           itemBuilder: (context, index) {
+                           return GestureDetector(
+                            child: _buildContainer(index),
+                               );
+                                 },
                         
                       ),
                     ),
@@ -127,8 +127,10 @@ itemBuilder: (context, index) {
 
 
   Widget _buildContainer(int index) {
-    String title = childrenContainers[index]["title"]!;
-    String imageUrl = childrenContainers[index]["imageURL"]!;
+
+
+    String title = categoryList[index]["title"]!;
+    String imageUrl = categoryList[index]["imageURL"]!;
 
 
     
