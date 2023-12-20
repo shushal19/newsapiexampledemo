@@ -21,3 +21,9 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
+<img width="317" alt="Screenshot 2023-12-20 at 15 13 31" src="https://github.com/shushal19/newsapiexampledemo/assets/59756277/eda56aa5-f158-4878-a1ac-4189c91076dd">
+
+
+This is my HomePage demo for news application using api.
+Thank you Mr. Shankar Kharel and Desvu Technologies 
+
