@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newsapiexample/models/newaclass.dart';
+
+
 class DetailsCard extends StatelessWidget {
   final Articles article;
 

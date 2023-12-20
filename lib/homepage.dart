@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'category_list.dart';
+import 'category_page.dart';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late HttpService http;
-  NewsClass? news,newsall;
+  NewsClass? news;
   
 
   bool isLoading = false;
@@ -91,6 +92,11 @@ class _HomePageState extends State<HomePage> {
                          scrollDirection: Axis.horizontal,
                            itemBuilder: (context, index) {
                            return GestureDetector(
+onTap: () {
+  Navigator.push(context, MaterialPageRoute(builder: (context)=>
+  CategoryPage( index: index,)));
+},
+
                             child: _buildContainer(index),
                                );
                                  },
